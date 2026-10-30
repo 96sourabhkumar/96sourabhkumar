@@ -67,13 +67,13 @@
 
 | Project | What it does | Stack | ⭐ | Updated |
 |:--|:--|:--|:-:|:-:|
-| [Fft Radar 3d Engine](https://github.com/sourabhkumar-96/fft-radar-3d-engine) | 3D FMCW MIMO radar Range → Doppler → Angle RTL pipeline for the KC705 | SystemVerilog | — | — |
-| [Ecg Arrhythmia Classifier](https://github.com/sourabhkumar-96/ecg-arrhythmia-classifier) | ECG arrhythmia classifier on a Zynq FPGA (PYNQ-Z2) | Python | — | — |
-| [Can Esim](https://github.com/sourabhkumar-96/can-esim) | Mixed-signal CAN controller and physical-layer verification in eSim/ngspice | VHDL | — | — |
-| [Esp32 Wireless Buggy Control](https://github.com/sourabhkumar-96/esp32-wireless-buggy-control) | Browser-based wireless buggy control over WebSockets | C++ | — | — |
-| [Hand Gesture Recognition](https://github.com/sourabhkumar-96/hand-gesture-recognition) | Real-time hand gesture recognition using a webcam | Python | — | — |
+| [Fft Radar 3d Engine](https://github.com/sourabhkumar-96/fft-radar-3d-engine) | <i>Description coming soon</i> | SystemVerilog | 0 | Sep 2026 |
+| [Ecg Arrhythmia Classifier](https://github.com/sourabhkumar-96/ecg-arrhythmia-classifier) | ECG arrhythmia classifier on a Zynq FPGA (PYNQ-Z2): Pan-Tompkins QRS detector + INT8 1D-CNN sharing one DSP. 97.05% on-board accuracy, bit-exact verified. | Python | 0 | Oct 2026 |
+| [Can Esim](https://github.com/sourabhkumar-96/can-esim) | <i>Description coming soon</i> | VHDL | 0 | Sep 2026 |
+| [esp32 Wireless Buggy Control](https://github.com/sourabhkumar-96/esp32-wireless-buggy-control) | Real-time wireless buggy control using ESP32, WebSockets, and a browser-based interface for low-latency motor control with dynamic speed adjustment. | C++ | 0 | Apr 2026 |
+| [Hand Gesture Recognition](https://github.com/sourabhkumar-96/hand-gesture-recognition) | End-to-end hand gesture recognition system using deep learning, OpenCV, and MediaPipe with real-time webcam inference. | Python | 0 | Apr 2026 |
 
-<p align="right"><sub>auto-synced every 6 hours</sub></p>
+<p align="right"><sub>5 public repos · auto-synced 30 Oct 2026</sub></p>
 <!-- REPOS:END -->
 
 ---
