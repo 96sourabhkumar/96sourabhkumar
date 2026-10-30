@@ -1,0 +1,48 @@
+name: Update GitHub Streak Stats
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/streak-stats.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: profile-readme-commit
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Streak stats (dark)
+        uses: DenverCoder1/github-readme-streak-stats@v1.7.0
+        with:
+          options: >-
+            user=${{ github.repository_owner }}&hide_border=true&disable_animations=true&background=0D1117&stroke=30363D&ring=F75C7E&fire=F75C7E&currStreakNum=F75C7E&sideNums=F75C7E&currStreakLabel=F75C7E&sideLabels=F75C7E&dates=A9B1D6
+          path: profile/github-stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Streak stats (light)
+        uses: DenverCoder1/github-readme-streak-stats@v1.7.0
+        with:
+          options: >-
+            user=${{ github.repository_owner }}&hide_border=true&disable_animations=true&background=FFFFFF&stroke=D0D7DE&ring=E5486A&fire=E5486A&currStreakNum=D1335A&sideNums=D1335A&currStreakLabel=D1335A&sideLabels=D1335A&dates=57606A
+          path: profile/github-stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit updated stats
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/
+          git diff --cached --quiet && exit 0
+          git commit -m "Update GitHub stats"
+          git pull --rebase origin main
+          git push
